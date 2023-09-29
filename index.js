@@ -1,7 +1,7 @@
 // load the things we need
 const express = require("express");
 const app = express();
-app.use(express.json());
+const port = process.env.PORT || 8080;
 
 
 // set the view engine to ejs
@@ -106,5 +106,7 @@ app.get('/counters', function(req, res) {
 //app.listen(8080);
 //console.log('8080 is the port');
 
-const port = process.env.PORT || 8080;
-app.listen(port, () => console.log(`Listening to port ${port}`));
+const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+server.keepAliveTimeout = 120 * 1000;
+server.headersTimeout = 120 * 1000;
