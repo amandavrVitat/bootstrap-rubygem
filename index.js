@@ -1,8 +1,8 @@
 // load the things we need
-const express = require('express');
+const express = require("express");
 const app = express();
+app.use(express.json());
 
-const PORT = 4000
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -106,10 +106,5 @@ app.get('/counters', function(req, res) {
 //app.listen(8080);
 //console.log('8080 is the port');
 
-app.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `)
-})
-
-
-// Export the Express API
-module.exports = app
+const port = process.env.PORT || 8080;
+app.listen(port, () => console.log(`Listening to port ${port}`));
