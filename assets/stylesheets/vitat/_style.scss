@@ -1,5 +1,5 @@
 //FONT LIVVIC
-@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&display=swap');
 
 //GUIDE VITAT
 @import "variables";
@@ -97,4 +97,23 @@ body,html {
   width: 100vw;
   height: 100vh;
   background-size: cover;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-xxs;
+
+  h3 {
+    margin: 0;
+  }
+
+  i {
+    font-size: 16px;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+  }
 }
